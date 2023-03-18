@@ -34,7 +34,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
         }
 
         final String token = header.split(" ")[1].trim();
-        UserContext userContext = jwtTokenProvider.getuserContext(token);
+        UserContext userContext = jwtTokenProvider.getUserContext(token);
         if (userContext == null) {
             chain.doFilter(request, response);
             return;

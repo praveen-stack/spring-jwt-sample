@@ -48,7 +48,7 @@ public class JwtTokenProvider {
         return (Claims)Jwts.parser().setSigningKey(this.getEncodedSecret()).parse(token).getBody();
     }
 
-    public UserContext getuserContext(String token) {
+    public UserContext getUserContext(String token) {
         try {
             Claims claims = (Claims) this.getBody(token);
             UserContext userDetail = new UserContext(this.getUserId(claims), this.getEmail(claims));

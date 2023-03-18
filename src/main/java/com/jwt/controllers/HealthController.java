@@ -11,9 +11,9 @@ public class HealthController {
 
     @RequestMapping({ "/health" })
     @ResponseBody
-	public Map<String, String> health() {
+    public Map<String, String> health() {
         Map<String, String> map = new HashMap<String, String>();
         map.put("status", "OK");
-		return map;
-	}
+        return map;
+    }
 }

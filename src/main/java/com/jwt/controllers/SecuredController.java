@@ -11,8 +11,8 @@ public class SecuredController {
 
     @RequestMapping({ "/secured" })
     @ResponseBody
-	public UserContext securedEndpoint(Authentication authentication) {
-        UserContext userContext = (UserContext) authentication.getPrincipal();;
-		return userContext;
-	}
+    public UserContext securedEndpoint(Authentication authentication) {
+        UserContext userContext = (UserContext) authentication.getPrincipal();
+        return userContext;
+    }
 }
